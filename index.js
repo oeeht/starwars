@@ -34,3 +34,46 @@ var quotes = [{
   'author': '- Darth Vader',
   'quote': 'The Force is strong with this one.'
 }];
+
+
+var random = Math.floor(Math.random() * quotes.length);
+
+function getQuote()
+{
+  var randQuote = quotes[random].quote;
+  console.log(randQuote);
+}
+
+function getAuthor()
+{
+  var author = quotes[random].author;
+  console.log(author);
+}
+
+function randQuote(author)
+{
+  var i = Math.floor(Math.random() * quotes.length);
+  var end = 0;
+  while(!end)
+  {
+    if(quotes[i].author.indexOf(author)>-1)
+    {
+      end = 1;
+      console.log(quotes[i].quote);
+      console.log(quotes[i].author);
+    }
+    else
+    {
+      var i = Math.floor(Math.random() * quotes.length);
+    }
+  }
+}
+
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('example')
+);
+
+getQuote();
+getAuthor();
+randQuote('Yoda');
