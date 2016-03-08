@@ -71,7 +71,7 @@ function randQuote(author)
 
 ReactDOM.render(
   <h1>Hello, world!</h1>,
-  document.getElementById('example')
+  document.getElementById('container)
 );
 
 getQuote();
